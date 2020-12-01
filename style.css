@@ -1,6 +1,7 @@
 .banner-area{
     background-image: url(1.jpg);
     background-position: center center;
+    -webkit-background-size: cover;
     background-size: cover;
     height: 100vh;
 }
