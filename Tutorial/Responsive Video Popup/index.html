@@ -17,8 +17,26 @@
                 Aspernatur saepe sint sed obcaecati ea veritatis natus at ratione accusantium nesciunt, 
                 velit maxime eaque expedita aut et! Sed aut ea rem.
             </p>
+            <a href="#" onclick="toggle();">Watch Trailer</a>
         </div>
     </div>
+    <div class="trailer">
+        <video src="image/infinitywar.mp4"
+        controls="true"></video>
+        <img src="image/close.png" class="close"
+             onclick="toggle();">
+
+    </div>
+    <script type="text/javascript">
+        function toggle(){
+            var trailer= document.querySelector(".trailer");
+            trailer.classList.toggle("active");
+
+            var video= document.querySelector("video");
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
     
 </body>
 </html>
