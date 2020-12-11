@@ -4,9 +4,13 @@ function toUC(){
 }
 
 //add event listener to the element
-
+//select element 1st
 let elUsername = document.getElementById("userName");
+
+//event and the function
 elUsername.addEventListener("keyup", toUC);
+
+
 
 function checkPWLength(){
     let pw = document.getElementById("password").value;
@@ -33,3 +37,9 @@ elPassword2.addEventListener("blur", function(){
     let a = document.getElementById("password2");
     checkPWLength2(a.value);
 });
+
+let link = document.getElementById("uum");
+link.addEventListener('click', function(){
+    event.preventDefault();
+    alert(link.href);
+})

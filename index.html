@@ -10,19 +10,42 @@
     
 </head>
 <body>
-    <h1 style="text-align: center;
-               font-family: Helvetica;
-               color: rgba(61, 111, 185, 0.479);">
-        The first webpage of my portfolio</h1>
-    <div class="center">
+    <section>
+        <h1 style="text-align: center;
+                font-family: Helvetica;
+                font-size: xx-large;
+                color: rgba(235, 241, 252, 0.479);">
+            The first webpage of my portfolio</h1>
         
         
-
-        <div class="box">
-            <p>
-                <a href="week01/index.html">Week 01<br>Exercises</a>
-            </p>
+        <div class="center">
+            <div class="box">
+                <p>
+                    <a href="week01/index.html">Week 01<br>Exercises</a>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    
+
+    <script type="text/javascript">
+        function createBubble(){
+            const section = document.querySelector('section');
+            const createElement = document.createElement('span');
+            var size = Math.random()*60;
+
+            createElement.style.width = 20+ size + 'px';
+            createElement.style.height = 20+ size + 'px';
+            createElement.style.left = Math.random()*innerWidth + 'px';
+            section.appendChild(createElement);
+
+            setTimeout(() =>{
+                createElement.remove();
+            }, 4000 )
+        }
+
+        setInterval(createBubble, 50);
+    </script>
 </body>
 </html>
